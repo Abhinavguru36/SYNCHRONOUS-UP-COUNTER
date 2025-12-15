@@ -43,6 +43,7 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 Developed by:ABHINAV GURU R
 RegisterNumber:25016474
 ~~~
+UPCOUNTER
 module ex11(out,clk,rst);
 
 input clk,rst;
@@ -64,21 +65,43 @@ out <= out+1;
 end
 
 endmodule
+
+DOWN COUNTER
+module ex12(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(rst)
+     out<=0;
+   else 
+     out <= out-1;
+end
+endmodule
 ~~~
 
 
 
 **RTL LOGIC UP COUNTER**
 
+UP COUNTER
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6ea3f02e-603f-4cd4-b22b-237a0e2417e2" />
+
+DOWNCOUNTER
+
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/4f51a3ed-ff05-422a-a638-be087524cdb3" />
 
 
 **TIMING DIAGRAM FOR IP COUNTER**
 
+UP COUNTER
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0e09aa5c-3633-4ce0-8619-4b7a013b9786" />
 
+DOWN COUNTER
+
+<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/bd3bc933-d115-4b59-a691-f1c03a5f7080" />
 
 
 **TRUTH TABLE**
@@ -88,4 +111,5 @@ endmodule
 
 
 **RESULTS**
-THus it is executed successfully
+
+Thus the 4 bit synchronous up counter and down counter validate functionality was executed successfully.
